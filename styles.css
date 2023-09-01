@@ -1,0 +1,180 @@
+/**** RESET ***/
+body {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    
+}
+
+
+/************ VARIABLES ********/
+
+:root {
+    --horizon: 22vh;
+    /* --seacolor: #3c53ce; */
+    /* --seacolor: #003E78; */
+    --skycolor: #c9e9f6;
+    --seacolor: #025080;
+    --sealevel: calc(var(--horizon) - 0.75vh );
+    --title-color: #e6bd55;
+    --yellow-color: #fddf19;
+    overflow-y: hidden;
+}
+
+/****** STYLES ******/
+header {
+    background-color: #87ceeb;
+    background-color: #c9e9f6;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 {
+    font: 900 5.5em "Libre Franklin";
+    font: 900 6em "Titan One";
+    color: var(--yellow-color);
+    color: goldenrod;
+    color: #e4b84a;
+    color: #e6bd55;
+    text-shadow: 2px 2px grey;
+}
+
+main {
+    background-color: blue;
+    background-color: var(--seacolor);
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -0.5rem 12rem 1.5rem #6dc4e7
+}
+
+.ocean {
+    overflow: hidden;
+    position: absolute;
+    top: var(--sealevel);
+    height: 4rem;
+    width: 100vw;
+}
+
+.wave {
+    display: flex;
+    position: absolute;
+    width: 40vw;
+    width: 50%;
+    width: 100%;
+    animation: wave 120s infinite;
+
+}
+
+.wave .peak {
+    flex: 0 0 60%;
+    background-color: var(--seacolor);
+    /* background-color: red; */
+    height: 4rem;
+    border-top-right-radius: 38%;
+    border-top-left-radius: 38%;
+    clip-path: polygon(0px 50%, 11.96% 8.85%, 27.29% 17.02%, 46.32% 5px, 68.37% 12.7%, 86.96% 3.36%, 100% 50%);
+    filter: drop-shadow(2px 2px 4px #003E78) 
+}
+
+.crest {
+    background-color: rgb(127, 255, 146);
+    background-color: var(--seacolor);
+    filter: blur(1rem);
+    height: 4rem;
+    position: absolute;
+    width: 100vw;
+    /* top: var(--sealevel); */
+    animation: crest 100s infinite;
+    overflow: hidden;
+
+    clip-path: polygon(0px 50%, 11.96% 8.85%, 27.29% 17.02%, 46.32% 5px, 68.37% 12.7%, 86.96% 3.36%, 100% 50%);
+
+}
+
+.lifeboat-outer {
+    width: 70vw;
+    margin-top: 6rem;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+    display: flex;
+    background-color: gold;
+    padding: 8rem 8rem 0;
+    box-sizing: content-box;
+}
+
+.lifeboat {
+    background-color: #fddf19;
+    width: 70vw;
+    height: 100%;
+    /* border-top-left-radius: 45%; */
+    /* border-top-right-radius: 45%; */
+    /* border: 2px solid var(--title-color); */
+    /* box-shadow: inset 2px 6px 6px var(--title-color); */
+
+    margin-top: 3rem;
+}
+
+.lifeboat > .visual-corner {
+    height: 40%;
+    width: 50%;
+    background-color: var(--seacolor);
+}
+.lifeboat > .visual-corner:first-of-type {
+    float: left;
+    /* clip-path: polygon(0 0, 0 100%, 5% 70%, 75% 5%, 100% 0); */
+    clip-path: polygon(0% 0%, 0 100%, 5% 70%, 50% 3%, 100% 0);
+    shape-outside: polygon(0% 0%, 0 100%, 5% 70%, 50% 3%, 100% 0);
+
+}
+.lifeboat > .visual-corner:last-of-type {
+    float: right;
+    clip-path: polygon(100% 0%, 100% 100%, 95% 70%, 50% 3%, 0 0%);
+    shape-outside: polygon(100% 0%, 100% 100%, 95% 70%, 50% 3%, 0 0%);
+}
+
+
+@keyframes wave {
+    from {
+        transform: translate3d(-20%, 0, 0)
+    }
+
+    50% {
+        transform: translate3d(20%, 2%, 0)
+    }
+
+    to {
+        transform: translate3d(-20%, 0, 0);
+    }
+}
+
+@keyframes crest {
+    from {
+        transform: translateX(-50%)
+    }
+    50% {
+        transform: translateX(50%)
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/************  FONTS  **********/
+
+@font-face {
+    font-family: "Libre Franklin Extra Bold";
+    src: 
+        url('fonts/LibreFranklin-ExtraBold.otf') format("otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Titan One";
+    src: url('fonts/Titan_One/TitanOne-Regular.ttf')
+}
