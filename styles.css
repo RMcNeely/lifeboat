@@ -20,6 +20,9 @@ h1,h2,h3,h4,h5,h6 {
     --sealevel: calc(var(--horizon) - 0.75vh );
     --title-color: #e6bd55;
     --yellow-color: #fddf19;
+    --grey-shadow: grey;
+    --lifeboat-radius: 40%;
+
     overflow-y: hidden;
 }
 
@@ -95,45 +98,22 @@ main {
 
 }
 
-.lifeboat-outer {
-    width: 70vw;
-    margin-top: 6rem;
-    border-top-left-radius: 45%;
-    border-top-right-radius: 45%;
-    display: flex;
-    background-color: gold;
-    padding: 8rem 8rem 0;
-    box-sizing: content-box;
-}
-
 .lifeboat {
     background-color: #fddf19;
-    width: 70vw;
+    max-width: 70vw;
     height: 100%;
-    /* border-top-left-radius: 45%; */
-    /* border-top-right-radius: 45%; */
-    /* border: 2px solid var(--title-color); */
-    /* box-shadow: inset 2px 6px 6px var(--title-color); */
+    border-top-left-radius: var(--lifeboat-radius);
+    border-top-right-radius: var(--lifeboat-radius);
+    border: 6rem solid var(--title-color);
+    box-shadow: inset 0 2px 0.75rem var(--grey-shadow);
 
     margin-top: 3rem;
 }
 
-.lifeboat > .visual-corner {
-    height: 40%;
-    width: 50%;
-    background-color: var(--seacolor);
-}
-.lifeboat > .visual-corner:first-of-type {
-    float: left;
-    /* clip-path: polygon(0 0, 0 100%, 5% 70%, 75% 5%, 100% 0); */
-    clip-path: polygon(0% 0%, 0 100%, 5% 70%, 50% 3%, 100% 0);
-    shape-outside: polygon(0% 0%, 0 100%, 5% 70%, 50% 3%, 100% 0);
-
-}
-.lifeboat > .visual-corner:last-of-type {
-    float: right;
-    clip-path: polygon(100% 0%, 100% 100%, 95% 70%, 50% 3%, 0 0%);
-    shape-outside: polygon(100% 0%, 100% 100%, 95% 70%, 50% 3%, 0 0%);
+article {
+    margin-top: var(--lifeboat-radius);
+    padding: 0.75rem;
+    text-align: center;
 }
 
 
