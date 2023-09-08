@@ -50,13 +50,19 @@ header h1 {
     text-shadow: 2px 2px grey;
 }
 
-main {
-    background-color: blue;
+body {
     background-color: var(--seacolor);
+    /* height: 78vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* box-shadow: 0 -0.5rem 12rem 1.5rem #6dc4e7 */
+}
+
+main {
     /* height: 78vh; */
     display: flex;
     justify-content: center;
-    box-shadow: 0 -0.5rem 12rem 1.5rem #6dc4e7
+    min-height: calc(100vh - var(--horizon));
 }
 
 .ocean {
@@ -64,7 +70,7 @@ main {
     position: absolute;
     top: var(--sealevel);
     height: 4rem;
-    width: 100vw;
+    width: 100%;
 }
 
 .wave {
@@ -106,7 +112,7 @@ main {
 .lifeboat {
     background-color: #fddf19;
     max-width: 70vw;
-    height: 100%;
+    /* height: 100%; */
     border-top-left-radius: var(--lifeboat-radius);
     border-top-right-radius: var(--lifeboat-radius);
     border: 6rem solid var(--title-color);
@@ -114,19 +120,30 @@ main {
     box-shadow: inset 0 2px 0.75rem var(--grey-shadow);
 
     margin-top: 3rem;
+    box-sizing: border-box;
+    padding: 6rem 4rem 0;
+
+    /*
     background-color: #FEEE85;
+    border-radius: var(--lifeboat-radius);
+    border-bottom: 6rem solid var(--title-color);
+    margin: 3rem 0; */
+
 }
 
 article {
     margin-top: 8rem;
     margin: 2rem;
-    /* text-align: center; */
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 h2.company-name {
     font: 700 3rem "Titan One";
     text-align: center;
-    margin: 1.5rem;
+    /* margin: 1.5rem; */
     color: #E75A0D;
 }
 
