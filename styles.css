@@ -164,6 +164,39 @@ h2.company-name {
 }
 
 
+details {
+    padding: 0 2rem;
+}
+
+details:hover {
+    border: 1px solid var(--title-color);
+    border-radius: 0.75rem;
+    box-shadow: 2px 2px 0.275rem var(--title-color);
+}
+
+summary {
+    list-style-image: url('lifering.svg');
+    margin-left: 0.5rem;
+    height: 2rem;
+    list-style: none;
+    margin-left: 2rem;
+    line-height: 2rem;
+}
+
+summary:before {
+    content: "";
+    background: no-repeat center/100% url('lifering.svg');
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    transform: translateX(-2rem);
+}
+
+summary:hover {
+    font-style: italic;
+    font-weight: 800;
+}
+
 @keyframes wave {
     from {
         transform: translate3d(-20%, 0, 0)
