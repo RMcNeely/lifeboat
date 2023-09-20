@@ -168,7 +168,7 @@ details {
     padding: 0 2rem;
 }
 
-details:hover {
+details:hover, details:focus, details[open] {
     border: 1px solid var(--title-color);
     border-radius: 0.75rem;
     box-shadow: 2px 2px 0.275rem var(--title-color);
@@ -181,6 +181,7 @@ summary {
     list-style: none;
     margin-left: 2rem;
     line-height: 2rem;
+    margin: 1rem 1.5rem;
 }
 
 summary:before {
@@ -189,13 +190,35 @@ summary:before {
     height: 2rem;
     width: 2rem;
     position: absolute;
-    transform: translateX(-2rem);
+    transform: translateX(-2.5rem);
 }
 
-summary:hover {
+summary:hover, summary:focus {
     font-style: italic;
     font-weight: 800;
 }
+
+details div {
+    display: grid;
+    grid-template: "bio bio"
+                    "info value";
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+
+details div .bio {
+    grid-area: bio;
+}
+/* details div .bio:before {
+    content: "Bio: ";
+    font-weight: bold;
+} */
+
+details div span:nth-child(2n) {
+    font-weight: bold;
+}
+
+
 
 @keyframes wave {
     from {
