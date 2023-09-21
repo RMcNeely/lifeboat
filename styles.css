@@ -218,7 +218,9 @@ details div span:nth-child(2n) {
     font-weight: bold;
 }
 
-
+details div span.social-link {
+    text-transform: capitalize;
+}
 
 @keyframes wave {
     from {

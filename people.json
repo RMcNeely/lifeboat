@@ -1,0 +1,24 @@
+{
+    "Ryan McNeely": {
+        "bio": "Some stuff about me and what I did at Podium here. This should be a relatively brief overview of what you did while you were at the company that you would like to hightlight. I worked on the Dev Platform Team.",
+        "jobTitle": "Software Engineer",
+        "email": "rmcneely23@gmail.com", 
+        "links": {
+            "linkedin": "https://linkedin.com/in/ryan-mcneely",
+            "github": "https://github.com/RMcNeely",
+            "personal Site": "https://mcneely.online"
+        },
+        "extras:": {}
+    },
+    "Fake MacFakerson": {
+        "bio": "I worked as a security engineer at Podium investigating suspicous users and detected malicious intrusion attempts. I AM the Red team. Definitely a real person, 3x CTF champ.",
+        "jobTitle": "Senior Security Engineer",
+        "email": "honeypots-r-us@fake.co", 
+        "links": {
+            "linkedin": "https://linkedin.com/in/fakey-macfakerson",
+            "github": "https://github.com/fake"
+        },
+        "extras:": {}
+    }
+
+}
